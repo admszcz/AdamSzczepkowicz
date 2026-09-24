@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na bocznicy świata - O mnie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.260.0/lucide.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gray: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f3f4f6; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af; 
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 antialiased leading-relaxed flex flex-col min-h-screen">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-semibold text-gray-900 tracking-tight">Na bocznicy świata</a>
+                </div>
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#o-mnie" class="text-gray-500 hover:text-gray-900 transition-colors duration-200 text-sm font-medium">O mnie</a>
+                    <a href="#projekty" class="text-gray-500 hover:text-gray-900 transition-colors duration-200 text-sm font-medium">Moje projekty</a>
+                    <a href="#przyszle-projekty" class="text-gray-500 hover:text-gray-900 transition-colors duration-200 text-sm font-medium">Przyszłe projekty</a>
+                    <a href="#materialy" class="text-gray-500 hover:text-gray-900 transition-colors duration-200 text-sm font-medium">Materiały dodatkowe</a>
+                </nav>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#o-mnie" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">O mnie</a>
+                <a href="#projekty" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Moje projekty</a>
+                <a href="#przyszle-projekty" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Przyszłe projekty</a>
+                <a href="#materialy" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Materiały dodatkowe</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="o-mnie" class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+                    <div class="flex-shrink-0">
+                        <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-gray-100 shadow-sm">
+                            <img src="https://placehold.co/400x400/e5e7eb/6b7280?text=Twoje+Zdjęcie" alt="Portret autora" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-semibold text-gray-900 mb-4">O mnie</h1>
+                        <p class="text-gray-600 mb-6 text-lg">
+                            Witaj na stronie autora bloga "Na bocznicy świata".
+                        </p>
+                        <div class="prose prose-gray text-gray-600">
+                            <p class="mb-4">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <p>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+                            </p>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="mt-8 flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-gray-800 transition-colors" aria-label="Facebook">
+                                <i data-lucide="facebook" class="w-6 h-6"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-800 transition-colors" aria-label="Twitter/X">
+                                <i data-lucide="twitter" class="w-6 h-6"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-800 transition-colors" aria-label="Instagram">
+                                <i data-lucide="instagram" class="w-6 h-6"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projekty" class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-2">Moje wpisy i projekty</h2>
+                    <p class="text-gray-500">Zbiór artykułów z bloga. Użyj wyszukiwarki, aby znaleźć interesujące Cię tematy.</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="mb-10 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i data-lucide="search" class="h-5 w-5 text-gray-400"></i>
+                    </div>
+                    <input type="text" id="post-search" class="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-lg leading-5 bg-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400 sm:text-sm transition-shadow shadow-sm" placeholder="Szukaj wpisów...">
+                </div>
+
+                <!-- Posts List -->
+                <div id="posts-container" class="space-y-6">
+                    <!-- Post Item 1 -->
+                    <div class="post-item bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-medium text-gray-900 post-title">Początki na bocznicy - dlaczego zacząłem pisać?</h3>
+                            <span class="text-xs text-gray-400 whitespace-nowrap ml-4">12 Mar 2026</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2 post-excerpt">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget.
+                        </p>
+                        <a href="https://blogger.com" target="_blank" class="inline-flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                            Czytaj dalej na Bloggerze <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Post Item 2 -->
+                    <div class="post-item bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-medium text-gray-900 post-title">Refleksje nad codziennością w szarych barwach</h3>
+                            <span class="text-xs text-gray-400 whitespace-nowrap ml-4">05 Kwi 2026</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2 post-excerpt">
+                            Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+                        </p>
+                        <a href="https://blogger.com" target="_blank" class="inline-flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                            Czytaj dalej na Bloggerze <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Post Item 3 -->
+                    <div class="post-item bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-medium text-gray-900 post-title">Jak znaleźć minimalizm w chaosie informacyjnym</h3>
+                            <span class="text-xs text-gray-400 whitespace-nowrap ml-4">28 Sie 2026</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2 post-excerpt">
+                            Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.
+                        </p>
+                        <a href="https://blogger.com" target="_blank" class="inline-flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                            Czytaj dalej na Bloggerze <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div id="no-results" class="hidden text-center py-10 text-gray-500">
+                    Nie znaleziono wpisów pasujących do wyszukiwania.
+                </div>
+            </div>
+        </section>
+
+        <section id="przyszle-projekty" class="py-20 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-2">Przyszłe projekty</h2>
+                    <p class="text-gray-500">Nad czym obecnie pracuję i co planuję opublikować w najbliższym czasie.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Project Card 1 -->
+                    <div class="p-6 rounded-xl border border-dashed border-gray-300 bg-gray-50/50">
+                        <div class="flex items-center mb-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-gray-400 mr-2"></i>
+                            <h3 class="text-md font-medium text-gray-800">E-book: Zapiski z bocznicy</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mb-1">
+                            <div class="bg-gray-400 h-1.5 rounded-full" style="width: 45%"></div>
+                        </div>
+                        <span class="text-xs text-gray-500">Postęp: 45%</span>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="p-6 rounded-xl border border-dashed border-gray-300 bg-gray-50/50">
+                        <div class="flex items-center mb-3">
+                            <i data-lucide="lightbulb" class="w-5 h-5 text-gray-400 mr-2"></i>
+                            <h3 class="text-md font-medium text-gray-800">Seria podcastów</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-3">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mb-1">
+                            <div class="bg-gray-400 h-1.5 rounded-full" style="width: 15%"></div>
+                        </div>
+                        <span class="text-xs text-gray-500">Faza planowania</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="materialy" class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-2">Materiały dodatkowe</h2>
+                    <p class="text-gray-500">Pliki i zasoby przygotowane przeze mnie, dostępne do pobrania.</p>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                    <ul class="divide-y divide-gray-100">
+                        <!-- File 1 -->
+                        <li class="p-4 hover:bg-gray-50 transition-colors flex items-center justify-between group">
+                            <div class="flex items-center">
+                                <div class="p-2 bg-gray-100 rounded-lg text-gray-500 mr-4">
+                                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Szablon notatek - Minimalistyczny.pdf</p>
+                                    <p class="text-xs text-gray-500">PDF • 1.2 MB</p>
+                                </div>
+                            </div>
+                            <button class="p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-200 rounded-full transition-colors" title="Pobierz">
+                                <i data-lucide="download" class="w-5 h-5"></i>
+                            </button>
+                        </li>
+                        
+                        <!-- File 2 -->
+                        <li class="p-4 hover:bg-gray-50 transition-colors flex items-center justify-between group">
+                            <div class="flex items-center">
+                                <div class="p-2 bg-gray-100 rounded-lg text-gray-500 mr-4">
+                                    <i data-lucide="image" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Zestaw tapet "Bocznica".zip</p>
+                                    <p class="text-xs text-gray-500">ZIP • 15.4 MB</p>
+                                </div>
+                            </div>
+                            <button class="p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-200 rounded-full transition-colors" title="Pobierz">
+                                <i data-lucide="download" class="w-5 h-5"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <div>
+                    &copy; <span id="current-year"></span> Na bocznicy świata.
+                </div>
+                
+                <!-- License Info -->
+                <div class="flex items-center text-center md:text-right max-w-lg">
+                    <i data-lucide="copyleft" class="w-4 h-4 mr-2 flex-shrink-0"></i>
+                    <p>
+                        Wszystkie materiały na tej stronie oraz treści wpisów na blogu udostępniam do swobodnego użytku pod warunkiem czytelnego i jednoznacznego wskazania mnie jako autora (podania źródła).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('post-search');
+        const posts = document.querySelectorAll('.post-item');
+        const noResults = document.getElementById('no-results');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            let hasVisiblePosts = false;
+
+            posts.forEach(post => {
+                const title = post.querySelector('.post-title').textContent.toLowerCase();
+                const excerpt = post.querySelector('.post-excerpt').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                    post.style.display = 'block';
+                    hasVisiblePosts = true;
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+
+            if (hasVisiblePosts) {
+                noResults.classList.add('hidden');
+            } else {
+                noResults.classList.remove('hidden');
+            }
+        });
+        
+        // Mock download button functionality
+        const downloadButtons = document.querySelectorAll('button[title="Pobierz"]');
+        downloadButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // In a real scenario, this would trigger a file download.
+                // For this mock, we just show a subtle effect or console log.
+                const originalIcon = btn.innerHTML;
+                btn.innerHTML = '<i data-lucide="check" class="w-5 h-5 text-gray-600"></i>';
+                lucide.createIcons();
+                setTimeout(() => {
+                    btn.innerHTML = originalIcon;
+                    lucide.createIcons();
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
