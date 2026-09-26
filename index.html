@@ -223,40 +223,19 @@
                 <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
                     <ul class="divide-y divide-gray-100">
                         <!-- Plik: Starożytny Rzym -->
-                        <li class="p-4 hover:bg-gray-50 transition-colors flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+                        <li class="p-4 hover:bg-gray-50 transition-colors flex items-center justify-between gap-4 group">
                             <div class="flex items-center">
                                 <div class="p-2 bg-amber-100 rounded-lg text-amber-800 mr-4 flex-shrink-0">
-                                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                                    <i data-lucide="presentation" class="w-6 h-6"></i>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-semibold text-gray-900">Starożytny Rzym (Prezentacja & Notatki)</p>
-                                    <p class="text-xs text-gray-500">Plik TXT • Historia, Legenda, Republika, Cesarstwo</p>
+                                    <p class="text-sm font-semibold text-gray-900">Starożytny Rzym - Prezentacja</p>
+                                    <p class="text-xs text-gray-500">Plik PPTX • Prezentacja multimedialna</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-2 w-full sm:w-auto">
-                                <button id="preview-rome-btn" class="px-3 py-1.5 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors flex items-center justify-center gap-1.5 flex-1 sm:flex-none">
-                                    <i data-lucide="eye" class="w-4 h-4"></i> Podgląd
-                                </button>
-                                <!-- BEZPOŚREDNI LINK DO PLIKU W FOLDERZE 'materialy' -->
-                                <a href="materialy/Starozytny_Rzym_Prezentacja.txt" download class="px-4 py-1.5 text-xs font-medium text-white bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors shadow-sm flex items-center justify-center gap-1.5 flex-1 sm:flex-none">
-                                    <i data-lucide="download" class="w-4 h-4"></i> Pobierz plik
-                                </a>
-                            </div>
-                        </li>
-
-                        <!-- Przykładowy Plik 2 -->
-                        <li class="p-4 hover:bg-gray-50 transition-colors flex items-center justify-between group">
-                            <div class="flex items-center">
-                                <div class="p-2 bg-gray-100 rounded-lg text-gray-500 mr-4">
-                                    <i data-lucide="file-text" class="w-6 h-6"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-medium text-gray-900">Szablon notatek - Minimalistyczny.pdf</p>
-                                    <p class="text-xs text-gray-500">PDF • 1.2 MB</p>
-                                </div>
-                            </div>
-                            <a href="materialy/szablon.pdf" download class="p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-200 rounded-full transition-colors" title="Pobierz">
-                                <i data-lucide="download" class="w-5 h-5"></i>
+                            <!-- BEZPOŚREDNI LINK DO PLIKU W GŁÓWNYM KATALOGU REPOZYTORIUM -->
+                            <a href="StarozytnyRzym.pptx" download class="px-4 py-2 text-xs font-medium text-white bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors shadow-sm flex items-center justify-center gap-1.5">
+                                <i data-lucide="download" class="w-4 h-4"></i> Pobierz plik
                             </a>
                         </li>
                     </ul>
@@ -264,33 +243,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Modal podglądu materiału -->
-    <div id="rome-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl shadow-xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden">
-            <div class="p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
-                <h3 class="font-semibold text-gray-900 flex items-center gap-2 text-sm sm:text-base">
-                    <i data-lucide="file-text" class="w-5 h-5 text-amber-600"></i>
-                    Starożytny Rzym - Treść Prezentacji
-                </h3>
-                <button id="close-modal-btn" class="text-gray-400 hover:text-gray-700 p-1 rounded-lg">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <div class="p-6 overflow-y-auto font-mono text-xs bg-gray-900 text-gray-100 whitespace-pre-wrap leading-relaxed select-all" id="modal-text-content"></div>
-            <div class="p-4 border-t border-gray-100 bg-gray-50 flex flex-wrap justify-between items-center gap-2">
-                <span id="modal-toast" class="text-xs text-emerald-600 font-medium hidden">✓ Skopiowano treść do schowka!</span>
-                <div class="flex gap-2 ml-auto w-full sm:w-auto justify-end">
-                    <button id="copy-text-btn" class="px-3 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-1.5">
-                        <i data-lucide="copy" class="w-4 h-4"></i> Kopiuj treść
-                    </button>
-                    <a href="materialy/Starozytny_Rzym_Prezentacja.txt" download class="px-4 py-2 text-xs font-medium text-white bg-amber-600 rounded-lg hover:bg-amber-700 transition-colors flex items-center gap-1.5">
-                        <i data-lucide="download" class="w-4 h-4"></i> Pobierz plik
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="bg-white border-t border-gray-200 mt-auto">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -345,95 +297,6 @@
                 } else {
                     noResults.classList.remove('hidden');
                 }
-            });
-        }
-
-        const romeTextContent = `================================================
-PREZENTACJA: STAROŻYTNY RZYM
-================================================
-
-1. POCZĄTKI
-------------------------------------------------
-Bardzo mało wiemy o początkach starożytnego Rzymu. Według historyków data założenia Rzymu w 753 roku p.n.e. to tylko legenda i nie da się jej udowodnić. Tak naprawdę nie wiemy, kiedy założono Rzym. To dlatego, że nie zachowały się żadne teksty z tamtego okresu.
-
-2. LEGENDA O ZAŁOŻENIU RZYMU
-------------------------------------------------
-Legenda o założeniu Rzymu mówi, że Rea, kapłanka, której nie wolno było mieć dzieci, zaszła w ciążę z bogiem wojny Marsem. Gdy urodziła bliźniaki, wrzucono je w wiklinowym koszu do lokalnej rzeki o nazwie Tybr. Dzieci o imionach Romulus i Remus przeżyły, bo wykarmiła je wilczyca o imieniu Lupa. Gdy chłopcy dorośli, postanowili założyć własne miasto. Podczas jego zakładania pokłócili się jednak i Romulus zabił Remusa. Miasto nazwano Roma (po polsku: Rzym), od imienia Romulusa.
-
-3. KRÓLESTWO RZYMU
-------------------------------------------------
-Po Romulusie Rzymem miało rządzić siedmiu królów. Ostatni z nich, król o imieniu Tarkwiniusz okazał się być złym władcą i został wygnany z miasta. Wtedy ustanowiono Republikę, czyli ustrój, w którym miastem zarządzali wybierani w głosowaniach urzędnicy. Rządy królów to jednak też tylko legenda. O tym okresie nie wiemy prawie nic.
-
-4. REPUBLIKA RZYMU
-------------------------------------------------
-Republika była systemem, w którym obywatele wybierali urzędników, którzy rządzili państwem. Gdy urzędnik okazywał się być zły, w następnych wyborach wybierano innego. Taki ustrój przetrwał ponad 400 lat, bo był sprawiedliwy i sprawiał, że mądrzy ludzie mieli duże szanse zostać urzędnikami.
-
-5. UPADEK REPUBLIKI
-------------------------------------------------
-Republika Rzymska upadła, gdy zdolny polityk Juliusz Cezar zmusił senatorów do przyznania mu pełnej władzy nad państwem. Cezar przeprowadził wiele korzystnych dla społeczeństwa reform, ale mimo tego jego władza nie podobała się senatorom. Wkrótce przeprowadzono spisek i zamordowano go w 44 p.n.e.
-
-6. POCZĄTKI CESARSTWA
-------------------------------------------------
-Po śmierci Juliusza Cezara władzę przejął jego adoptowany syn Oktawian, któremu nadano pseudonim August. Oktawian panował bardzo długo i przyjmuje się, że był on pierwszym cesarzem Rzymu.
-
-7. WIELKIE CESARSTWO
-------------------------------------------------
-Po Oktawianie Auguście Rzymem rządziło wielu cesarzy, zarówno dobrych, jak i złych. Tych dobrych było jednak więcej, dzięki czemu państwo stale rosło, aż na przełomie I i II wieku naszej ery osiągnęło szczyt potęgi. Było wielkie i bardzo potężne. Pozostawiło po sobie trwały ślad – wiele sławnych budowli, drogi, kodeksy prawne i język łaciński, którym mówiono przez następne kilkaset lat.
-
-8. KRYZYS CESARSTWA RZYMSKIEGO
-------------------------------------------------
-Cesarstwo Rzymskie upadło wskutek poważnego kryzysu, jakiego doświadczyło po czasie największej potęgi. Kryzys ten miał trzy główne przyczyny:
-1. Najazdy barbarzyńców – Rzym był bardzo bogaty, przez co chętnie najeżdżali go zagraniczni najeźdźcy. Wymagało to utrzymywania coraz większej armii, a to dużo kosztowało.
-2. Kryzys gospodarczy – utrzymywanie wielkiej armii i liczne inwestycje kosztowały tak dużo, że w pewnym momencie pieniędzy zaczęło brakować.
-3. Rywalizacja o władzę – każdy chciał mieć władzę, przez co ciągle dochodziło do zmian na tronie, a to powodowało duże zamieszanie.
-
-9. UPADEK CESARSTWA RZYMSKIEGO
-------------------------------------------------
-W 395 roku umarł cesarz Teodozjusz Wielki. W swoim testamencie rozkazał on, żeby Cesarstwo Rzymskie podzielono na dwie części: wschodnią, ze stolicą w Konstantynopolu i zachodnią, ze stolicą w Rzymie. Cesarstwo Zachodniorzymskie nie przetrwało długo – w 476 roku upadło. Cesarstwo Wschodniorzymskie istniało jeszcze ponad 1000 lat, aż do 1453!
-
-10. CO ZAPAMIĘTAĆ?
-------------------------------------------------
-- Rzym był potężną cywilizacją, która miała trzy ustroje: na początku był królestwem, potem republiką, potem cesarstwem.
-- Królestwo Rzymu zostało zastąpione przez Republikę po wygnaniu ostatniego króla.
-- Republika Rzymu została zastąpione przez Cesarstwo Rzymskie po śmierci Juliusza Cezara w 44 roku p.n.e.
-- Cesarstwo w 395 roku zostało podzielone na dwie części: wschodnią (stolica w Konstantynopolu) i zachodnią (stolica w Rzymie).
-`;
-
-        // Obsługa modala podglądu
-        const previewRomeBtn = document.getElementById('preview-rome-btn');
-        const romeModal = document.getElementById('rome-modal');
-        const closeModalBtn = document.getElementById('close-modal-btn');
-        const modalTextContent = document.getElementById('modal-text-content');
-        const copyTextBtn = document.getElementById('copy-text-btn');
-        const modalToast = document.getElementById('modal-toast');
-
-        if (previewRomeBtn && romeModal) {
-            previewRomeBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                modalTextContent.textContent = romeTextContent;
-                romeModal.classList.remove('hidden');
-                lucide.createIcons();
-            });
-        }
-
-        if (closeModalBtn && romeModal) {
-            closeModalBtn.addEventListener('click', () => romeModal.classList.add('hidden'));
-            romeModal.addEventListener('click', (e) => {
-                if (e.target === romeModal) romeModal.classList.add('hidden');
-            });
-        }
-
-        if (copyTextBtn) {
-            copyTextBtn.addEventListener('click', () => {
-                const textarea = document.createElement('textarea');
-                textarea.value = romeTextContent;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-
-                modalToast.classList.remove('hidden');
-                setTimeout(() => modalToast.classList.add('hidden'), 2500);
             });
         }
     </script>
